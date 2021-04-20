@@ -1,0 +1,54 @@
+$color-green-positive: rgb(60, 187, 180);
+$color-yellow-negative: rgb(249, 173, 29);
+$color-dark-background: rgba(0, 0, 0, 0.4);
+$color-darker-background: rgba(0, 0, 0, 0.6);
+$color-darker-gray: rgba(51, 51, 51, 1);
+$color-dark-gray: rgba(70, 70, 70, 1);
+$color-light-gray: rgba(235, 235, 235, 1);
+$color-light-background: rgba(255, 255, 255, 0.4);
+$color-lighter-background: rgba(255, 255, 255, 0.8);
+$color-white: rgba(255, 255, 255, 1);
+$color-mid-grey: rgb(137, 137, 137);
+
+a,
+a:visited {
+  color: $color-white;
+}
+
+.container {
+  display: contents;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media all and (min-width: 768px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 1100px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+  
+  .container > aside {
+    margin-right: 0;
+    margin-left: 0
+  }
+
+  .container {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

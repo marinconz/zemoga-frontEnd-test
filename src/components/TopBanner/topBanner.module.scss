@@ -1,0 +1,93 @@
+@import "../../App.scss";
+
+.bannerTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: $color-light-gray;
+
+  .leftBanner {
+    flex-basis: 40%;
+    padding-right: 1rem;
+  }
+
+  .leftBanner .bannerHairline {
+    color: $color-dark-gray;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: -0.07rem;
+  }
+
+  .leftBanner > .bannerTitle {
+    display: block;
+    color: $color-dark-gray;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+  }
+
+  .bannerRight {
+    flex-basis: 60%;
+  }
+
+  .bannerText {
+    margin: 0;
+    color: $color-dark-gray;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: -0.05rem;
+  }
+
+  .iconButton {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    display: flex;
+  }
+}
+
+@media all and (min-width: 500px) {
+  .bannerTop {
+    .leftBanner {
+      flex-basis: 30%;
+    }
+
+    .bannerRight {
+      flex-basis: 70%;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .bannerTop {
+    .leftBanner {
+      flex-basis: 20%;
+    }
+
+    .bannerRight {
+      flex-basis: 80%;
+    }
+  }
+}
+
+@media all and (min-width: 1100px) {
+  .bannerTop {
+    .bannerText,
+    .leftBanner > .bannerHairline {
+      font-size: 1rem;
+    }
+
+    .leftBanner > .bannerTitle {
+      font-size: 1.5rem;
+      letter-spacing: 0;
+    }
+
+    .iconButton {
+      display: block;
+      margin-left: 2rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../App.scss";
+.cardContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+
+  .headerContainer {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      display: inline-block;
+      font-size: 50px;
+      padding-left: 10px;
+      font-weight: 300;
+      line-height: 1;
+      color: $color-darker-gray;
+      margin: 0;
+    }
+    .list {
+      width: 170px;
+      height: 40px;
+      border: 2px solid black;
+      
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .cardContainer {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  }
+}
+

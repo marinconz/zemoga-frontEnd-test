@@ -1,0 +1,192 @@
+@import "../../App.scss";
+
+.heroCard {
+  .heroFeaturedCard {
+    position: relative;
+    top: 5.5rem;
+    left: 1rem;
+    overflow: hidden;
+    width: 55%;
+    max-height: 25rem;
+  }
+
+  .featuredCardGlassBackground {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: center no-repeat linear-gradient($color-dark-background, $color-dark-background),
+      -25% 0/160% no-repeat url(/resources/img/pope-francis.png);
+    filter: blur(1rem);
+  }
+
+  .featuredCardContent {
+    position: relative;
+    padding: 1rem;
+    color: $color-white;
+  }
+
+  .featuredCardHairline {
+    margin: 0;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  .featuredCardTitle {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .featuredCardDesc {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 10.5rem;
+    margin: 1rem 0;
+    -webkit-box-orient: vertical;
+    font-size: 1.25rem;
+    font-weight: 300;
+    -webkit-line-clamp: 6;
+    text-overflow: ellipsis;
+  }
+
+  .featuredCardMoreInfo {
+    display: none;
+  }
+
+  .featuredCardMoreInfoIcon {
+    width: 1.5rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+  }
+
+  .featuredCardCta {
+    font-weight: 700;
+  }
+
+  .featuredCardButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -1rem -1rem;
+  }
+
+  .featuredCardButtons > .iconButton {
+    width: 50%;
+    height: 2.75rem;
+  }
+
+  .featuredCardButtons > .iconButton > img {
+    max-width: 1.25rem;
+  }
+
+  .iconButton {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    &.thumbsUp {
+      background-color: rgba($color-green-positive, 0.8);
+    }
+
+    &.thumbsUp:hover {
+      background-color: rgba($color-green-positive, 1);
+    }
+
+    &.thumbsDown {
+      background-color: rgba($color-yellow-negative, 0.8);
+    }
+
+    &.thumbsDown:hover {
+      background-color: rgba($color-yellow-negative, 1);
+    }
+  }
+
+  .iconButton > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .heroCard {
+    .featuredCardGlassBackground {
+      background: center no-repeat linear-gradient($color-dark-background, $color-dark-background),
+        7% -6.5rem/115% auto no-repeat url(/resources/img/pope-francis.png);
+    }
+
+    .featuredCardContent {
+      padding: 2rem 1.5rem;
+    }
+
+    .featuredCardMoreInfo {
+      display: inline-block;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    .featuredCardButtons {
+      margin: 0 -1.5rem -2rem;
+    }
+  }
+}
+
+@media all and (min-width: 1100px) {
+  .heroCard {
+    .maxCentered {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .maxCenteredMain {
+      padding: 0;
+    }
+
+    .heroFeaturedCard {
+      left: 0;
+      width: 50%;
+      min-width: 600px;
+      max-height: unset;
+      margin-top: 2.5rem;
+    }
+
+    .featuredCardGlassBackground {
+      background: center no-repeat linear-gradient($color-dark-background, $color-dark-background),
+        calc(-50% + 650px) -6rem/105% auto no-repeat url(/resources/img/pope-francis.png);
+    }
+
+    .featuredCardContent {
+      padding: 2rem 1.5rem;
+    }
+
+    .featuredCardDesc {
+      max-width: 85%;
+      margin: 2rem 0 1rem;
+    }
+
+    .featuredCardCta {
+      margin: 1rem 0 2rem;
+      font-size: 1.5rem;
+    }
+
+    .featuredCardButtons {
+      margin: 0 -1.5rem -2rem;
+    }
+
+    .featuredCardButtons > .iconButton {
+      height: auto;
+    }
+
+    .featuredCardButtons > .iconButton > img {
+      max-width: 2rem;
+      height: 2rem;
+      margin: 1.3rem 0;
+    }
+  }
+}
